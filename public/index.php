@@ -24,8 +24,8 @@ $pageInfo = Utils::getPageInfo($MENU_ENTRIES, $currentPageId);
 	<body>
 <?php echo Content::getPageContent($pageInfo); ?>
 <?php echo Utils::analytics(ANALYTICS_ID); ?>
-		<div class="lightbox-bg"></div>
-		<div class="lightbox-wrapper">
+		<div id="lightbox-bg" class="lightbox-bg"></div>
+		<div id="lightbox-wrapper" class="lightbox-wrapper">
 			<div id="lightbox-content" class="lightbox-content"></div>
 			<div id="lightbox-close" class="lightbox-close" role="button" aria-label="Close the image">X</div>
 		</div>
@@ -70,6 +70,9 @@ $pageInfo = Utils::getPageInfo($MENU_ENTRIES, $currentPageId);
     		displayImage(e.target.getAttribute('data-image'));
     	}
     });
+    on('.content', 'click', '.mosaic .image', function(e) {
+   		displayImage(e.target.getAttribute('src'));
+    });
     document.body.addEventListener('keyup', function(e){
     	if (e.keyCode == 27) {
     		e.preventDefault();
@@ -77,6 +80,7 @@ $pageInfo = Utils::getPageInfo($MENU_ENTRIES, $currentPageId);
     	}
     });
     document.getElementById('lightbox-close').addEventListener('click', closeLightBox);
+    document.getElementById('lightbox-wrapper').addEventListener('click', closeLightBox);
 </script>		
 	</body>
 </html>

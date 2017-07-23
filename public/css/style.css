@@ -76,6 +76,9 @@ dd {
 	flex-grow: 1;
 	text-align: center;
 }
+.lightbox-content img {
+    max-width: 100%;
+}
 .lightbox-close {
 	position: absolute;
 	top: 1em;

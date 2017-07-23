@@ -175,7 +175,8 @@
 	    display: inline-block;
 	    margin: .3em;
 	}
-	.thumb-gallery li:hover {
+	.thumb-gallery li:hover,
+	.mosaic .image:hover {
 		cursor: pointer;
 	}
 	@media(max-width: 640px) {
