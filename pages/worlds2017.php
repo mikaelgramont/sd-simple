@@ -232,6 +232,9 @@
 		.header-links {
 			display: none;
 		}
+		.fb-comments {
+			display: none;
+		}
 	}
 </style>
 
