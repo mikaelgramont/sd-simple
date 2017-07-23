@@ -233,7 +233,7 @@
 				If you weren’t able to make it, here’s a little recap of what went down.
 				</p>
 			</div>
-			<div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="box_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>			
+			<div class="fb-like" data-href="<?php echo 'https://'. $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI']; ?>" data-layout="box_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>			
 		</div>
 	</div>
 </div>
@@ -516,7 +516,7 @@
 		So we had fun, and we're sad it's over, so it's natural to look towards the future. The decision for where the next Worlds are going to be held has yet to be made, but one thing is for sure, this year was a great success by all acounts, so expectations are high now. See you next year!
 	</p>
 	
-	<div class="fb-comments" data-href="https://developers.facebook.com/docs/plugins/comments#configurator" data-width="800" data-numposts="5"></div>
+	<div class="fb-comments" data-href="<?php echo 'https://'. $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI']; ?>" data-width="800" data-numposts="5"></div>
 </div>
 				</section>
 			</main>
