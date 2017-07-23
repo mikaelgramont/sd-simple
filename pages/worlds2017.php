@@ -219,12 +219,20 @@
 			<main role="main" class="main">
 				<section>
 
+<meta property="og:title" content="The 2017 World Mountainboard Championships"/>
+<meta property="og:description" content="A quick recap of what went down at the WMC17."/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="<?php echo 'https://'. $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI']; ?>"/>
+<meta property="og:site_name" content="Surfing Dirt"/>
+<meta property="og:image" content="<?php echo BASE_URL ?>images/wmc17/cover-freestyle.jpg"/>
+
+
 <div class="cover">
 	<div class="cover-title-wrapper">
 		<div class="title-and-like-container">
 			<div>
 				<h1 class="cover-title">
-					The 2017 World Mountainboard Championships <span class="title-metadata">posted on July 23rd 2017 by Mika</span>
+					The 2017 World Mountainboard Championships <span class="title-metadata">posted on July 23rd 2017 by <a href="https://www.mountainboard.fr/profil/mikael_1/">Mika</a></span>
 				</h1>
 				<p class="text introduction">
 				When was the last time you attended both the World Freestyle Championship and World Boardercross Championship? Hmm? Can’t remember? That’s not surprising, that never happened.<br>
@@ -253,8 +261,9 @@
 	<p class="text">For those not familiar with the AMC, they started well over ten years ago, with <a href="https://www.mountainboard.fr/profil/seatoyen_416/">Ludovic Faure (Ludo)</a> at the helm the whole time, organising learn-to-rides and demonstrations in the Paris area, taking trips to mountainboard centers in the UK, and competing in French and foreign competitions.</p>
 
 	<p class="text">In 2009, Ludo secured a location for a <a href="https://www.mountainboard.fr/spot-de-mountainboard/parc-du-bois-de-plaisance_948/">mountainboard park</a> in <a href="https://www.google.fr/maps/place/Venette/@49.4167123,2.7829709,325m/data=!3m1!1e3!4m5!3m4!1s0x47e7d6a3f5728fd9:0x81979f2f8b078e49!8m2!3d49.41595!4d2.800696?hl=en">Venette</a>, and the AMC built it up over the years, organising several competitions.<br>
-	So when Ludo stepped up to have the AMC run Worlds this year, it was obvious they were not newcomers, and we were all hopeful for a smoothly-run event. And boy, did they deliver.<br>
-	When the first riders showed up early that week, the park had just received a ton of rain. Luckily, carpets were covering the whole place, and after a day or two of drying, the place looked amazing (if I may say so myself, having been involved in the last-minute preparations!).</p>
+	So when Ludo stepped up to have the AMC run Worlds this year, it was obvious they were not newcomers, and we were all hopeful for a smoothly-run event. And boy, did they deliver.
+	</p>
+	<p class="text">When the first riders showed up early that week, the park had just received a ton of rain. Luckily, carpets were covering the whole place, and after a day or two of drying, the place looked amazing (if I may say so myself, having been involved in the last-minute preparations!).</p>
 
 	<div class="mosaic mosaic-2-1-1">
 		<figure class="a">
@@ -513,7 +522,10 @@
 
 	<h2>KTHXBAI</h2>
 	<p class="text">
-		So we had fun, and we're sad it's over, so it's natural to look towards the future. The decision for where the next Worlds are going to be held has yet to be made, but one thing is for sure, this year was a great success by all acounts, so expectations are high now. See you next year!
+		So we had fun, and we're sad it's over, so it's natural to look towards the future. The decision for where the next Worlds are going to be held has yet to be made, but one thing is for sure, this year was a great success by all acounts, so expectations are high now.
+	</p>
+	<p class="text">
+		Huge thank you's to the organisers: Ludo, Gauthier, Simon, Nico, Max, Ludwig and all the others who made this all possible. See you next year!
 	</p>
 	
 	<div class="fb-comments" data-href="<?php echo 'https://'. $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI']; ?>" data-width="800" data-numposts="5"></div>
