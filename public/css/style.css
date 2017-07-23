@@ -8,6 +8,7 @@ body {
 	background-color: #e9d5a7;	
 	color: #1b1703;
 	font-family: Roboto, Helvetica;
+	position: relative;
 }
 
 a,
@@ -47,6 +48,46 @@ dd {
 /* Convenience classes */
 .fillContainer {
 	max-width: 100%;
+}
+
+.lightbox-bg,
+.lightbox-wrapper {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0,0,0,.9);
+	z-index: 1;
+	display: none;
+}
+.lightbox-visible .lightbox-bg {
+	display: block;
+}
+.lightbox-wrapper {
+	z-index: 2;
+	background: transparent;
+}
+.lightbox-visible .lightbox-wrapper {
+	display: flex;
+	align-items: center;
+}
+.lightbox-content {
+	flex-grow: 1;
+	text-align: center;
+}
+.lightbox-close {
+	position: absolute;
+	top: 1em;
+	right: 1em;
+	color: #fff;
+	font-family: monospace;
+	font-size: 24px;
+	font-weight: bold;
+	padding: 1em;
+}
+.lightbox-close:hover {
+	cursor: pointer;
 }
 
 

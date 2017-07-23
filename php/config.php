@@ -8,7 +8,7 @@ function wmcMeta() {
 	ob_start();
 	?>
 		<meta property="og:title" content="The 2017 World Mountainboard Championships"/>
-		<meta property="og:description" content="A quick recap of what went down at the WMC17."/>
+		<meta property="og:description" content="When was the last time you attended both the World Freestyle Championship and World Boardercross Championship? Hmm? Can’t remember? That’s not surprising, that never happened!"/>
 		<meta property="og:type" content="website"/>
 		<meta property="og:url" content="<?php echo 'https://'. $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI']; ?>"/>
 		<meta property="og:site_name" content="Surfing Dirt"/>

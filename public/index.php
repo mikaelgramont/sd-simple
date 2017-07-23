@@ -24,5 +24,59 @@ $pageInfo = Utils::getPageInfo($MENU_ENTRIES, $currentPageId);
 	<body>
 <?php echo Content::getPageContent($pageInfo); ?>
 <?php echo Utils::analytics(ANALYTICS_ID); ?>
+		<div class="lightbox-bg"></div>
+		<div class="lightbox-wrapper">
+			<div id="lightbox-content" class="lightbox-content"></div>
+			<div id="lightbox-close" class="lightbox-close" role="button" aria-label="Close the image">X</div>
+		</div>
+<script>
+    function on(elSelector, eventName, selector, fn) {
+        var element = document.querySelector(elSelector);
+
+        element.addEventListener(eventName, function(event) {
+            var possibleTargets = element.querySelectorAll(selector);
+            var target = event.target;
+
+            for (var i = 0, l = possibleTargets.length; i < l; i++) {
+                var el = target;
+                var p = possibleTargets[i];
+
+                while(el && el !== element) {
+                    if (el === p) {
+                        return fn.call(p, event);
+                    }
+
+                    el = el.parentNode;
+                }
+            }
+        });
+    }
+
+    function displayImage(url) {
+        var lbc = document.getElementById('lightbox-content');
+        var img = document.createElement('img');
+        img.setAttribute('src', url);
+        lbc.appendChild(img);
+        document.body.classList.add('lightbox-visible');
+    }
+    function closeLightBox() {
+        var lbc = document.getElementById('lightbox-content');
+        lbc.innerHTML = '';
+    	document.body.classList.remove('lightbox-visible');
+    }
+
+    on('.content', 'click', '.thumb-gallery .image', function(e) {
+    	if (e.target.getAttribute('data-image')) {
+    		displayImage(e.target.getAttribute('data-image'));
+    	}
+    });
+    document.body.addEventListener('keyup', function(e){
+    	if (e.keyCode == 27) {
+    		e.preventDefault();
+    		closeLightBox();
+    	}
+    });
+    document.getElementById('lightbox-close').addEventListener('click', closeLightBox);
+</script>		
 	</body>
 </html>

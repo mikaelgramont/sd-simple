@@ -175,6 +175,9 @@
 	    display: inline-block;
 	    margin: .3em;
 	}
+	.thumb-gallery li:hover {
+		cursor: pointer;
+	}
 	@media(max-width: 640px) {
 		h1,
 		h2 {
@@ -526,4 +529,3 @@
 				</section>
 			</main>
 		</div>
-
