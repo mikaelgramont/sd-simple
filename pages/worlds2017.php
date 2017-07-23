@@ -219,13 +219,6 @@
 			<main role="main" class="main">
 				<section>
 
-<meta property="og:title" content="The 2017 World Mountainboard Championships"/>
-<meta property="og:description" content="A quick recap of what went down at the WMC17."/>
-<meta property="og:type" content="website"/>
-<meta property="og:url" content="<?php echo 'https://'. $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI']; ?>"/>
-<meta property="og:site_name" content="Surfing Dirt"/>
-<meta property="og:image" content="<?php echo BASE_URL ?>images/wmc17/cover-freestyle.jpg"/>
-
 
 <div class="cover">
 	<div class="cover-title-wrapper">
@@ -251,7 +244,7 @@
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
   js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10&appId=1726273124340058";
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10&appId=<?php echo APP_ID ?>";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
