@@ -22,6 +22,12 @@ $pageInfo = Utils::getPageInfo($MENU_ENTRIES, $currentPageId);
 ?>
 	</head>
 	<body>
+	<script>
+		if( /iPhone/i.test(navigator.userAgent) ) {
+			document.body.classList.add('iphone');
+		}
+	</script>
+
 <?php echo Content::getPageContent($pageInfo); ?>
 <?php echo Utils::analytics(ANALYTICS_ID); ?>
 		<div id="lightbox-bg" class="lightbox-bg"></div>

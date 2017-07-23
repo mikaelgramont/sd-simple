@@ -85,6 +85,9 @@
 		width: 100%;
 		height: 100%;
 	}
+	.iphone .vrview-wrapper {
+		display: none;
+	}
 	h1,
 	h2 {
 		width: 800px;
@@ -342,7 +345,6 @@
 		<iframe class="vrview" allowfullscreen="true" src="<?php echo BASE_URL?>vrview.html?image=<?php echo BASE_URL?>images/wmc17/view-from-the-first-berm.jpg"></iframe>
 		<figcaption>360-degree view of the freestyle area.</figcaption>
 	</figure>
-
 	<p class="text">The smaller line was joy to see. The AMC has somehow been hoarding dozens of jumps, tables, wedges and rails from nearby skateparks, and kept them in their warehouse these past few years. For the competition, they arranged them all behind the “Bretonne” table-top jump and that made for some fun lines. They also had a beautiful hip jump but it was hard to link it with other features so people did not ride it much until after the competition.</p>
 
 	<figure>
