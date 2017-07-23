@@ -1,6 +1,30 @@
 <style>
+	/* Header */
+	.logo-container {
+		width: 258px;
+		margin: 20px auto;
+		text-align: center;
+	}
+	.logo {
+		width: 100%;
+	}
+	.title {
+		width: 258px;
+	}
+	.wrapper {
+		width: 100%;
+		max-width: 1024px;
+		padding: 0 1em;
+		margin: 0 auto;
+	}
+	.content {
+		max-width: 640px;
+	}
 	dl {
 		margin: 0 auto;
+	}
+	dt {
+		font-weight: bold;
 	}
 	dd {
 		text-align: justify;
@@ -21,6 +45,7 @@
 		height: 1.75em;
 		font-size: 1em;
 		padding: .25em;
+		min-width: 40px;
 	}
 	.submit {
 		background: #2a8fc0;
@@ -31,19 +56,32 @@
 	}
 
 </style>
+		<div class="wrapper">
+			<header>
+				<div class="logo-container">
+					<a href="<?php echo BASE_URL ?>" aria-label="Surfing Dirt logo">
+						<img class="logo" alt="" src="<?php echo BASE_URL ?>images/logo.png">
+						<img class="title" alt="" src="<?php echo BASE_URL ?>images/title.png">
+					</a>
+				</div>
+				<a aria-hidden="true" class="banner" href="<?php echo BASE_URL ?>">
+				</a>
+			</header>
+			<main role="main" class="main">
+				<section>
 
-<dl>
-	<dt>What is it?</dt>
+<dl class="content">
+	<dt>What is this?</dt>
 	<dd>Surfing Dirt is a site about mountainboarding. As of 2017, it’s just an idea, but soon it will evolve into something fun and useful for mountainboarders. Stay tuned!</dd>
 
-	<dt>But I know this name.</dt>
+	<dt>But I know the name.</dt>
 	<dd>That means you’ve been around mountainboarding for a long time! Surfing Dirt used to be a very active forum. It slowly died down like many forums and sites. But we’re bringing it back!</dd>
 
 	<dt>When can I use it?</dt>
 	<dd>It’s going to take a lot of work to build this, so we can’t promise much before Spring 2018.  Before that, we’ll post content and you can check out <a href="<?php echo BASE_URL ?>forum">the Surfing Dirt forum</a>, which still exists!</dd>
 
 	<dt>Anything else?</dt>
-	<dd>We'd love for you to sign up for our newsletter. We promise we’ll only send you a few updates before we launch. Talk to you soon!</dd>
+	<dd>We'd love for you to sign up for our newsletter. We promise we’ll only send you a few updates before we launch. Alternatively, you can <a href="https://www.facebook.com/surfingdirtcom/">like our Facebook page</a>. Talk to you soon!</dd>
 
 	<dt></dt>
 	<dd>
@@ -90,3 +128,6 @@
 	</dd>
 </dl>
 
+				</section>
+			</main>
+		</div>
