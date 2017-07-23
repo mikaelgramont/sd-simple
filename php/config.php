@@ -8,4 +8,10 @@ $MENU_ENTRIES = array(
 		'url' => '',
 		'file' => 'home.php'
 	],
+	(object) [
+		'skipMenuEntry' => true,
+		'title' => 'World Championships 2017',
+		'url' => '2017',
+		'file' => 'worlds2017.php'
+	],
 );
