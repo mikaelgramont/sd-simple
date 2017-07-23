@@ -11,7 +11,7 @@ $MENU_ENTRIES = array(
 	(object) [
 		'skipMenuEntry' => true,
 		'title' => 'World Championships 2017',
-		'url' => '2017',
+		'url' => 'wmc-2017',
 		'file' => 'worlds2017.php'
 	],
 );
