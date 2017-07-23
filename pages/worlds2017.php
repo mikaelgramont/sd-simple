@@ -180,6 +180,18 @@
 		cursor: pointer;
 	}
 	@media(max-width: 640px) {
+		.top-header {
+			display: block;
+		}
+		.cover {
+			width: 100%;
+			height: initial;
+			padding-bottom: 0;
+			background: #000;
+		}
+		.cover-title-wrapper {
+			position: initial;
+		}
 		h1,
 		h2 {
 			width: auto;
@@ -206,6 +218,19 @@
 		    display: block;
 		    margin: 1em auto;
 		    width: 150px;
+		}
+		.logo-container {
+			margin: .5em 0;
+		}
+		.logo-container a {
+			display: inline-block;
+			vertical-align: middle;
+		}
+		.logo-container .title {
+			width: 200px;
+		}
+		.header-links {
+			display: none;
 		}
 	}
 </style>
