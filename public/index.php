@@ -36,6 +36,10 @@ $pageInfo = Utils::getPageInfo($MENU_ENTRIES, $currentPageId);
 			<div id="lightbox-close" class="lightbox-close" role="button" aria-label="Close the image">X</div>
 		</div>
 <script>
+	var lightBoxOpen = false;
+	var galleryMembers = [];
+	var currentGalleryIndex = null;
+
     function on(elSelector, eventName, selector, fn) {
         var element = document.querySelector(elSelector);
 
@@ -58,29 +62,68 @@ $pageInfo = Utils::getPageInfo($MENU_ENTRIES, $currentPageId);
         });
     }
 
-    function displayImage(url) {
+    function displayImage(imageEl) {
+    	var url = imageEl.getAttribute('data-image') || imageEl.getAttribute('src');
+    	if (!url) {
+    		throw new Error('No url to display for imageEl');
+    	}
         var lbc = document.getElementById('lightbox-content');
         var img = document.createElement('img');
         img.setAttribute('src', url);
+        if (lightBoxOpen) {
+	        lbc.innerHTML = '';
+        }
         lbc.appendChild(img);
         document.body.classList.add('lightbox-visible');
+        lightBoxOpen = true;
     }
     function closeLightBox() {
+    	if (!lightBoxOpen) {
+    		return;
+    	}
         var lbc = document.getElementById('lightbox-content');
         lbc.innerHTML = '';
     	document.body.classList.remove('lightbox-visible');
+    	galleryMembers.length = 0;
+    	currentGalleryIndex = null;
+    	lightBoxOpen = false;
     }
 
     on('.content', 'click', '.thumb-gallery .image', function(e) {
-    	if (e.target.getAttribute('data-image')) {
-    		displayImage(e.target.getAttribute('data-image'));
+    	galleryMembers = e.target.parentNode.parentNode.querySelectorAll('.thumb-gallery .image');
+    	for (var i = 0; i < galleryMembers.length; i++) {
+    		if (galleryMembers[i] == e.target) {
+    			currentGalleryIndex = i;
+    			break;
+    		}
     	}
+  		displayImage(e.target);
     });
     on('.content', 'click', '.mosaic .image', function(e) {
-   		displayImage(e.target.getAttribute('src'));
+   		displayImage(e.target);
     });
     document.body.addEventListener('keyup', function(e){
+    	if (!lightBoxOpen) {
+    		return;
+    	}
+    	if (e.keyCode == 37) {
+    		// Left
+    		var prevIndex = currentGalleryIndex - 1;
+    		if (prevIndex >= 0) {
+    			currentGalleryIndex = prevIndex;
+    			displayImage(galleryMembers[currentGalleryIndex]);
+    		}
+    	}
+    	if (e.keyCode == 39) {
+    		// Right
+    		var nextIndex = currentGalleryIndex + 1;
+    		if (nextIndex < galleryMembers.length) {
+    			currentGalleryIndex = nextIndex;
+    			displayImage(galleryMembers[currentGalleryIndex]);
+    		}
+    	}
     	if (e.keyCode == 27) {
+    		// ESC
     		e.preventDefault();
     		closeLightBox();
     	}
