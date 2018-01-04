@@ -20,6 +20,22 @@ function wmcMeta() {
 	return $out;
 }
 
+function newYear2018Meta() {
+	ob_start();
+	?>
+		<meta property="og:title" content="2018 is upon us. What to expect."/>
+		<meta property="og:description" content="Other riders' resolutions, and the plan for Surfing Dirt in 2018."/>
+		<meta property="og:type" content="website"/>
+		<meta property="og:url" content="<?php echo 'https://'. $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI']; ?>"/>
+		<meta property="og:site_name" content="Surfing Dirt"/>
+		<meta property="og:image" content="<?php echo BASE_URL ?>images/2018/cover.png"/>
+		<meta property="fb:app_id" content="<?php echo APP_ID ?> "/>
+	<?php
+	$out = ob_get_contents();
+	ob_end_clean();
+	return $out;
+}
+
 $MENU_ENTRIES = array(
 	(object) [
 		'title' => '',
@@ -38,6 +54,6 @@ $MENU_ENTRIES = array(
 		'title' => '2018 resolutions',
 		'url' => '2018-resolutions',
 		'file' => '2018-resolutions.php',
-		'meta' => wmcMeta()
+		'meta' => newYear2018Meta()
 	],
 );

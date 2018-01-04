@@ -1,6 +1,5 @@
 <style>
 	/* Header */
-	/* Header */
 	.top-header {
 		display: flex;
 	    width: 100%;
