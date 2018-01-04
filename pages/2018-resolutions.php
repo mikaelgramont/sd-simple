@@ -40,6 +40,10 @@
 		padding: 0;
 	}
 
+	.fb_iframe_widget {
+		float: right;
+	}
+
 	blockquote{
 	  display:block;
 	  background: #fff;
@@ -156,6 +160,8 @@
 			<h1>It's that time of year again.</h1>
 			<p>Like, the beginning. You know, when everyone goes from celebrating Xmas/Hanukkah/the winter holiday to cheering for the new year and asking you about your resolutions. And of course you usually don't have any.</p>
 			<p>So let's see what some people had to say, maybe you'll find some inspiration!</p>
+
+			<div class="fb-like" data-href="<?php echo 'https://'. $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI']; ?>" data-layout="box_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>			
 
 			<article>
 				<h1>Rider resolutions for 2018</h1>
@@ -296,3 +302,13 @@
 		</section>
 	</main>
 </div>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10&appId=<?php echo APP_ID ?>";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
