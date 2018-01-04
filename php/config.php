@@ -13,7 +13,7 @@ function wmcMeta() {
 		<meta property="og:url" content="<?php echo 'https://'. $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI']; ?>"/>
 		<meta property="og:site_name" content="Surfing Dirt"/>
 		<meta property="og:image" content="<?php echo BASE_URL ?>images/wmc17/cover-freestyle.jpg"/>
-		<meta property="fb:app_id" content="<?php echo APP_ID ?> "/>
+		<meta property="fb:app_id" content="<?php echo APP_ID ?>"/>
 	<?php
 	$out = ob_get_contents();
 	ob_end_clean();
@@ -29,7 +29,7 @@ function newYear2018Meta() {
 		<meta property="og:url" content="<?php echo 'https://'. $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI']; ?>"/>
 		<meta property="og:site_name" content="Surfing Dirt"/>
 		<meta property="og:image" content="<?php echo BASE_URL ?>images/2018/cover.jpg"/>
-		<meta property="fb:app_id" content="<?php echo APP_ID ?> "/>
+		<meta property="fb:app_id" content="<?php echo APP_ID ?>"/>
 	<?php
 	$out = ob_get_contents();
 	ob_end_clean();
