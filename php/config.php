@@ -28,7 +28,7 @@ function newYear2018Meta() {
 		<meta property="og:type" content="website"/>
 		<meta property="og:url" content="<?php echo 'https://'. $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI']; ?>"/>
 		<meta property="og:site_name" content="Surfing Dirt"/>
-		<meta property="og:image" content="<?php echo BASE_URL ?>images/2018/cover.png"/>
+		<meta property="og:image" content="<?php echo BASE_URL ?>images/2018/cover.jpg"/>
 		<meta property="fb:app_id" content="<?php echo APP_ID ?> "/>
 	<?php
 	$out = ob_get_contents();
