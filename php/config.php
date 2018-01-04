@@ -33,4 +33,11 @@ $MENU_ENTRIES = array(
 		'file' => 'worlds2017.php',
 		'meta' => wmcMeta()
 	],
+	(object) [
+		'skipMenuEntry' => true,
+		'title' => '2018 resolutions',
+		'url' => '2018-resolutions',
+		'file' => '2018-resolutions.php',
+		'meta' => wmcMeta()
+	],
 );
