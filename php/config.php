@@ -36,6 +36,22 @@ function newYear2018Meta() {
 	return $out;
 }
 
+function trucksMeta() {
+	ob_start();
+	?>
+		<meta property="og:title" content="Looking for some mountainboarding trucks?"/>
+		<meta property="og:description" content="SurfingDirt has a bunch of Mountainboard trucks for sale. Read up!"/>
+		<meta property="og:type" content="website"/>
+		<meta property="og:url" content="<?php echo 'https://'. $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI']; ?>"/>
+		<meta property="og:site_name" content="Surfing Dirt"/>
+		<meta property="og:image" content="<?php echo BASE_URL ?>images/trucks/cover.jpg"/>
+		<meta property="fb:app_id" content="<?php echo APP_ID ?>"/>
+	<?php
+	$out = ob_get_contents();
+	ob_end_clean();
+	return $out;
+}
+
 $MENU_ENTRIES = array(
 	(object) [
 		'title' => '',
@@ -55,5 +71,12 @@ $MENU_ENTRIES = array(
 		'url' => '2018-resolutions',
 		'file' => '2018-resolutions.php',
 		'meta' => newYear2018Meta()
+	],
+	(object) [
+		'skipMenuEntry' => true,
+		'title' => 'Looking for some trucks?',
+		'url' => 'trucks',
+		'file' => 'trucks.php',
+		'meta' => trucksMeta()
 	],
 );
