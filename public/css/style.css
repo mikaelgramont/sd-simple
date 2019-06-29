@@ -5,15 +5,15 @@
 
 body {
 	margin: 0;
-	background-color: #e9d5a7;	
-	color: #1b1703;
+	background-color: #fcf3df;	
+	color: #110d0d;
 	font-family: Roboto, Helvetica;
 	position: relative;
 }
 
 a,
 a:visited {
-	color: #2a8fc0;
+	color: #1fa3bc;
 	font-weight: 700;
 }
 

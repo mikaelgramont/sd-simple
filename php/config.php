@@ -20,6 +20,22 @@ function wmcMeta() {
 	return $out;
 }
 
+function homeMeta() {
+	ob_start();
+	?>
+		<meta property="og:title" content="SurfingDirt - we'll see you soon"/>
+		<meta property="og:description" content="We need a place for mountainboarders to come together online and grow as a community again. Surfing Dirt hopes to solve that problem." />
+		<meta property="og:type" content="website"/>
+		<meta property="og:url" content="<?php echo 'https://'. $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI']; ?>"/>
+		<meta property="og:site_name" content="Surfing Dirt"/>
+		<meta property="og:image" content="<?php echo BASE_URL ?>images/home/og.png"/>
+		<meta property="fb:app_id" content="<?php echo APP_ID ?>"/>
+	<?php
+	$out = ob_get_contents();
+	ob_end_clean();
+	return $out;
+}
+
 function newYear2018Meta() {
 	ob_start();
 	?>
@@ -54,9 +70,10 @@ function trucksMeta() {
 
 $MENU_ENTRIES = array(
 	(object) [
-		'title' => '',
+		'title' => 'Surfing Dirt',
 		'url' => '',
-		'file' => 'home.php'
+		'file' => 'home.php',
+		'meta' => homeMeta()
 	],
 	(object) [
 		'skipMenuEntry' => true,
