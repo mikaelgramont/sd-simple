@@ -42,7 +42,9 @@ $pageInfo = Utils::getPageInfo($MENU_ENTRIES, $currentPageId);
 
     function on(elSelector, eventName, selector, fn) {
         var element = document.querySelector(elSelector);
-
+        if (!element) {
+            return;
+        }
         element.addEventListener(eventName, function(event) {
             var possibleTargets = element.querySelectorAll(selector);
             var target = event.target;
