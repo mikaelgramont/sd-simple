@@ -49,7 +49,9 @@ HTML;
 
 	public static function getCurrentPageId($path)
 	{
-		$preg = '/(.*)\/(.*)/i';
+		$parts = explode('?', $path);
+		$path = $parts[0];
+	  $preg = '/(.*)\/(.*)/i';
 		$matches = null;
 		preg_match($preg, $path, $matches);
 		return sizeof($matches) == 3 ? $matches[2] : '';
