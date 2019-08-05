@@ -54,6 +54,7 @@ HTML;
 	  $preg = '/(.*)\/(.*)/i';
 		$matches = null;
 		preg_match($preg, $path, $matches);
-		return sizeof($matches) == 3 ? $matches[2] : '';
+
+		return sizeof($matches) == 3 ? $matches[2] : $matches[0];
 	}
 }
