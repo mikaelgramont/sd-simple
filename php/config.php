@@ -100,7 +100,7 @@ $MENU_ENTRIES = array(
 	(object) [
 		'skipMenuEntry' => true,
 		'title' => 'World Freestyle Championship 2019',
-		'url' => 'album/28162f02-87bc-4456-9062-0ded5850e814',
+		'url' => '28162f02-87bc-4456-9062-0ded5850e814',
 		'file' => 'wfc2019.php',
 		'meta' => wfc2019Meta()
 	],
