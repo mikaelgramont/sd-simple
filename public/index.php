@@ -14,7 +14,7 @@ $pageInfo = Utils::getPageInfo($MENU_ENTRIES, $currentPageId);
 <html>
 	<head>
         <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
-<?php echo Head::content(KEYWORDS, $pageInfo, 'css/style.css'); ?>
+<?php echo Head::content(KEYWORDS, $pageInfo, BASE_URL.'css/style.css'); ?>
 <?php
 	if (isset($pageInfo->meta)) {
 		echo $pageInfo->meta;
