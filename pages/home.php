@@ -139,11 +139,11 @@
 		
 		<section class="section1">
 			<p>
-			  <span aria-labelledby="word--first" role="text">
+			  <span aria-labelledby="word--first1" role="text">
 			    <span aria-hidden="true">
 			      <span class="dropcap">R</span>emember
 			    </span>
-			    <span id="word--first" class="hidden">Remember</span>
+			    <span id="word--first1" class="hidden">Remember</span>
 			  </span> before Facebook? There were so many resources for mountainboarding online. Forums, websites, photo galleries… Where are those now? The sad answer is they’re mostly gone. Facebook has made it so easy to post photos and videos and share them that people slowly stopped using other sites. That’s actually what happened to <a href="<?php echo BASE_URL?>forum">the old Surfing Dirt forum</a>!</p>
 
 			<p>When you meet someone who seems genuinely excited to try mountainboarding, where do you send them? To a Facebook group, maybe? Sure there are many mountainboard groups on Facebook, and a lot of people use them. But they feel wrong. We need a place for mountainboarders to come together online and grow as a community again.</p>
@@ -153,11 +153,11 @@
 
 		<section class="section2">
 			<p>
- 			  <span aria-labelledby="word--first" role="text">
+ 			  <span aria-labelledby="word--first2" role="text">
 			    <span aria-hidden="true">
 			      <span class="dropcap">F</span>or
 			    </span>
-			    <span id="word--first" class="hidden">For</span>
+			    <span id="word--first2" class="hidden">For</span>
 			  </span>those of you who attended the <a href="<?php echo BASE_URL?>wmc-2017">2017 World Champs in Compiègne</a>, you may remember stickers that were passed around announcing our comeback in… 2018.</p>
 
 			<p>Looks like we’re a little late! Well, to tell you the truth, we aren’t quite ready to launch yet, but we’re definitely launching this year! We’ll start small and build up until mountainboarders across the world have an online home again.</p>

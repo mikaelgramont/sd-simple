@@ -78,6 +78,8 @@ $pageInfo = Utils::getPageInfo($MENU_ENTRIES, $currentPageId);
         lbc.appendChild(img);
         document.body.classList.add('lightbox-visible');
         lightBoxOpen = true;
+
+      history.pushState({}, "", url);
     }
     function closeLightBox() {
     	if (!lightBoxOpen) {
@@ -89,6 +91,8 @@ $pageInfo = Utils::getPageInfo($MENU_ENTRIES, $currentPageId);
     	galleryMembers.length = 0;
     	currentGalleryIndex = null;
     	lightBoxOpen = false;
+
+      history.pushState({}, "", '<?php echo $_SERVER['REQUEST_URI'] ?>');
     }
 
     on('.content', 'click', '.thumb-gallery .image', function(e) {
@@ -114,7 +118,7 @@ $pageInfo = Utils::getPageInfo($MENU_ENTRIES, $currentPageId);
     		if (prevIndex >= 0) {
     			currentGalleryIndex = prevIndex;
     			displayImage(galleryMembers[currentGalleryIndex]);
-    		}
+        }
     	}
     	if (e.keyCode == 39) {
     		// Right

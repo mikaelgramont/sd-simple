@@ -19,11 +19,26 @@ function wmcMeta() {
 	ob_end_clean();
 	return $out;
 }
+function wfc2019Meta() {
+	ob_start();
+	?>
+		<meta property="og:title" content="The 2019 World Freestyle Championship"/>
+		<meta property="og:description" content="A collection of photos from the WFC 2019 in Moszczenica, Poland"/>
+		<meta property="og:type" content="website"/>
+		<meta property="og:url" content="<?php echo 'https://'. $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI']; ?>"/>
+		<meta property="og:site_name" content="Surfing Dirt"/>
+		<meta property="og:image" content="<?php echo BASE_URL ?>images/wfc19/og.png"/>
+		<meta property="fb:app_id" content="<?php echo APP_ID ?>"/>
+	<?php
+	$out = ob_get_contents();
+	ob_end_clean();
+	return $out;
+}
 
 function homeMeta() {
 	ob_start();
 	?>
-		<meta property="og:title" content="SurfingDirt - we'll see you soon"/>
+		<meta property="og:title" content="Surfing Dirt - we'll see you soon"/>
 		<meta property="og:description" content="We need a place for mountainboarders to come together online and grow as a community again. Surfing Dirt hopes to solve that problem." />
 		<meta property="og:type" content="website"/>
 		<meta property="og:url" content="<?php echo 'https://'. $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI']; ?>"/>
@@ -70,7 +85,7 @@ function trucksMeta() {
 
 $MENU_ENTRIES = array(
 	(object) [
-		'title' => 'Surfing Dirt',
+		'title' => 'Home page',
 		'url' => '',
 		'file' => 'home.php',
 		'meta' => homeMeta()
@@ -81,6 +96,13 @@ $MENU_ENTRIES = array(
 		'url' => 'wmc-2017',
 		'file' => 'worlds2017.php',
 		'meta' => wmcMeta()
+	],
+	(object) [
+		'skipMenuEntry' => true,
+		'title' => 'World Freestyle Championship 2019',
+		'url' => 'album/28162f02-87bc-4456-9062-0ded5850e814',
+		'file' => 'wfc2019.php',
+		'meta' => wfc2019Meta()
 	],
 	(object) [
 		'skipMenuEntry' => true,
